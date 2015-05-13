@@ -4,7 +4,7 @@
 	   author	   = "Lukasz Paczkowski"
 	   copyright   = "GPL"
 	   url		   = "http://boo.codehaus.org/"
-	   description = "Provides support for the Boo programming language."
+	   description = "Boo Language Binding"
 	   category	   = "Language bindings"
 	   version	   = "1.0.0">
 	   
@@ -25,8 +25,8 @@
 	</Runtime>
 
 	<Dependencies>
-		<Addin id = "Core" version = "5.0.0"/>
-		<Addin id = "Ide" version = "5.0.0"/>
+		<Addin id = "Core" version = "5.9.0"/>
+		<Addin id = "Ide" version = "5.9.0"/>
 <!--		<Addin id = "SourceEditor2" version = "4.0.1" />
 		<Addin id = "DesignerSupport" version = "4.0.1" />
 		<Addin id = "Refactoring" version = "4.0.1" />	-->
@@ -68,12 +68,9 @@
 		<DataType class = "Boo.MonoDevelop.ProjectModel.BooProjectParameters" />
 	</Extension>-->
 	
-	<Extension path = "/MonoDevelop/ProjectModel/MSBuildItemTypes">
-		<DotNetProject 
-			language="Boo" 
-			extension="booproj" 
-			guid="{B3672514-7503-4B01-B4B4-B44E87061EA2}" />
-	</Extension>
+  <Extension path = "/MonoDevelop/ProjectModel/MSBuildItemTypes">
+		<DotNetProject language="Boo" extension="booproj" guid="{B3672514-7503-4B01-B4B4-B44E87061EA2}"/>
+  </Extension>
 		
 <!--	<Extension path = "/MonoDevelop/Core/StockIcons">
 		<StockIcon stockid = "md-boo-file" resource = "BooFile.png" />

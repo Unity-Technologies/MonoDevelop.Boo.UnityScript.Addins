@@ -11,12 +11,12 @@ namespace Boo.MonoDevelop.ProjectModel
 
 		public ConfigurationParameters CreateCompilationParameters (XmlElement projectOptions)
 		{
-			throw new NotImplementedException ();
+			return new BooCompilationParameters ();
 		}
 
 		public ProjectParameters CreateProjectParameters (XmlElement projectOptions)
 		{
-			throw new NotImplementedException ();
+			return new BooProjectParameters ();
 		}
 
 		public BuildResult Compile (ProjectItemCollection items, DotNetProjectConfiguration configuration, ConfigurationSelector configSelector, IProgressMonitor monitor)
@@ -31,14 +31,10 @@ namespace Boo.MonoDevelop.ProjectModel
 
 		public System.CodeDom.Compiler.CodeDomProvider GetCodeDomProvider ()
 		{
-			throw new NotImplementedException ();
+			return new Boo.Lang.CodeDom.BooCodeProvider ();
 		}
 
-		public string ProjectStockIcon {
-			get {
-				throw new NotImplementedException ();
-			}
-		}
+		public string ProjectStockIcon { get { return "md-project"; } }
 
 		#endregion
 
