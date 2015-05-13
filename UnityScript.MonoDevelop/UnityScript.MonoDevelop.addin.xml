@@ -1,0 +1,123 @@
+<Addin namespace   = "MonoDevelop"
+	   id		   = "UnityScript"
+	   name		   = "UnityScript Language Binding"
+	   author	   = "Lukasz Paczkowski"
+	   copyright   = "GPL"
+	   url		   = "http://unity3d.com"
+	   description = "Provides support for UnityScript projects."
+	   category	   = "Language bindings"
+	   version	   = "1.0.0">
+	   
+	<Runtime>
+		<Import assembly="UnityScript.MonoDevelop.dll" />
+<!--		<Import assembly="Boo.MonoDevelop.Util.dll" />
+		<Import assembly="Boo.Ide.dll" />
+		<Import assembly="UnityScript.Ide.dll" />
+		<Import assembly="bin/UnityScript.Lang.dll" />
+		<Import assembly="bin/UnityScript.dll" />
+		<Import assembly="bin/Boo.Lang.dll" />
+		<Import assembly="bin/Boo.Lang.Extensions.dll" />
+		<Import assembly="bin/Boo.Lang.Useful.dll" />
+		<Import assembly="bin/Boo.Lang.Compiler.dll" />
+		<Import assembly="bin/Boo.Lang.Parser.dll" />
+		<Import assembly="bin/Boo.Lang.PatternMatching.dll" />
+		<Import assembly="bin/Boo.Lang.CodeDom.dll" />
+		<Import assembly="bin/Boo.Lang.Interpreter.dll" />
+		<Import file="bin/us.exe" />-->
+	</Runtime>
+
+	<Dependencies>
+		<Addin id = "Core" version = "5.9.0"/>
+		<Addin id = "Ide" version = "5.9.0"/>
+<!--		<Addin id = "SourceEditor2" version = "4.0.1" />
+		<Addin id = "DesignerSupport" version = "4.0.1" />
+		<Addin id = "Refactoring" version = "4.0.1" />	-->
+	</Dependencies>
+	
+<!--	<Extension path="/MonoDevelop/Core/SupportPackages">
+		<Condition id="PackageNotInstalled" name="mono-unityscript" version="0.9.4">
+			<Package name="unityscript" version="0.9.4" clrVersion="Default">
+				<Assembly file="bin/UnityScript.Lang.dll" />
+				<Assembly file="bin/UnityScript.dll" />
+			</Package>
+		</Condition>
+	</Extension>-->
+	
+<!--	<Extension path = "/MonoDevelop/Ide/FileTemplates">
+		<FileTemplate id = "UnityScriptEmptyFile" resource = "EmptyUnityScriptFile.xft.xml"/>
+	</Extension>-->
+
+<!--	<Extension path = "/MonoDevelop/Ide/ProjectTemplates">
+		<ProjectTemplate id = "UnityScriptConsoleProject" resource = "ConsoleProject.xpt.xml"/>
+	</Extension>-->
+	
+	<Extension path = "/MonoDevelop/Ide/FileFilters">
+		<FileFilter id = "UnityScript"
+		            insertbefore="AllFiles"
+		            _label = "UnityScript Files"
+			    extensions = "*.us;*.js"/>
+	</Extension>
+	
+	<Extension path = "/MonoDevelop/ProjectModel/SerializableClasses">
+		<DataType class = "UnityScript.MonoDevelop.ProjectModel.UnityScriptCompilationParameters" />
+		<DataType class = "UnityScript.MonoDevelop.ProjectModel.UnityScriptProjectParameters" />
+	</Extension>
+	
+	<Extension path = "/MonoDevelop/ProjectModel/MSBuildItemTypes">
+		<DotNetProject 
+			language="UnityScript" 
+			extension="unityproj" 
+			guid="{b955b5aa-9c1c-4cd6-9a10-9e34431be3eb}" />
+	</Extension>
+		
+	<Extension path = "/MonoDevelop/Core/StockIcons">
+		<StockIcon stockid = "md-unityscript-file" resource = "UnityScriptFile32.png" />
+	</Extension>
+	
+	<Extension path = "/MonoDevelop/Core/MimeTypes">
+		<MimeType id="text/x-unityscript" _description="UnityScript source code" icon="md-unityscript-file" isText="true">
+			<File pattern="*.us" />
+			<File pattern="*.js" />
+		</MimeType>
+	</Extension>
+
+<!--	<Extension path = "/MonoDevelop/SourceEditor2/SyntaxModes">
+		<Templates resource="UnityScriptSyntaxMode.xml"/>
+	</Extension>-->
+
+	<Extension path = "/MonoDevelop/ProjectModel/LanguageBindings">
+		<LanguageBinding id = "UnityScript"
+				supportedextensions = ".us;.js"
+				class = "UnityScript.MonoDevelop.ProjectModel.UnityScriptLanguageBinding" />
+	</Extension> 
+	
+<!--	<Extension path = "/MonoDevelop/Ide/TextEditorExtensions">
+		<Class class = "UnityScript.MonoDevelop.Completion.UnityScriptEditorCompletion" />
+	</Extension>-->
+	
+<!--	<Extension path = "/MonoDevelop/TypeSystem/Parser">
+		<Parser mimeType = "text/x-unityscript"
+			class = "UnityScript.MonoDevelop.ProjectModel.UnityScriptParser" />
+		<Parser mimeType = "text/x-javascript"
+			class = "UnityScript.MonoDevelop.ProjectModel.UnityScriptParser" />
+		<Parser mimeType = "application/javascript"
+			class = "UnityScript.MonoDevelop.ProjectModel.UnityScriptParser" />
+	</Extension>-->
+	
+<!--	<Extension path="/MonoDevelop/SourceEditor2/ContextMenu/Editor">
+		<Condition id="FileType" fileExtensions=".js">
+			<CommandItem id = "MonoDevelop.Refactoring.RefactoryCommands.GotoDeclaration" insertafter="MonoDevelop.SourceEditor.SourceEditorCommands.MarkerOperations" />
+		</Condition>
+		<Condition id="FileType" fileExtensions=".us">
+			<CommandItem id = "MonoDevelop.Refactoring.RefactoryCommands.GotoDeclaration" insertafter="MonoDevelop.SourceEditor.SourceEditorCommands.MarkerOperations" />
+		</Condition>
+	</Extension>
+	
+	<Extension path = "/MonoDevelop/ProjectModel/Gui/ItemOptionPanels/Build/Compiler">  
+		<Condition id="ActiveLanguage" value="UnityScript">  
+			<Panel id = "UnityScriptCompilationParametersPanel"  
+				_label = "Compiler"  
+				class = "UnityScript.MonoDevelop.ProjectModel.GUI.UnityScriptCompilationParametersPanel"/>  
+		</Condition>
+	</Extension>  -->
+</Addin>
