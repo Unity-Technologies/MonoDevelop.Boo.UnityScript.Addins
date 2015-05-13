@@ -1,7 +1,7 @@
 ﻿using System;
 using MonoDevelop.Projects;
 
-namespace Boo.MonoDevelop
+namespace Boo.MonoDevelop.ProjectModel
 {
 	public class BooCompilationParameters : ConfigurationParameters
 	{

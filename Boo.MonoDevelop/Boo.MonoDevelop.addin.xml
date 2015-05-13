@@ -63,14 +63,14 @@
 			    extensions = "*.boo"/>
 	</Extension>
 	
-<!--	<Extension path = "/MonoDevelop/ProjectModel/SerializableClasses">
+	<Extension path = "/MonoDevelop/ProjectModel/SerializableClasses">
 		<DataType class = "Boo.MonoDevelop.ProjectModel.BooCompilationParameters" />
 		<DataType class = "Boo.MonoDevelop.ProjectModel.BooProjectParameters" />
-	</Extension>-->
+	</Extension>
 	
-  <Extension path = "/MonoDevelop/ProjectModel/MSBuildItemTypes">
+	<Extension path = "/MonoDevelop/ProjectModel/MSBuildItemTypes">
 		<DotNetProject language="Boo" extension="booproj" guid="{B3672514-7503-4B01-B4B4-B44E87061EA2}"/>
-  </Extension>
+  	</Extension>
 		
 	<Extension path = "/MonoDevelop/Core/StockIcons">
 		<StockIcon stockid = "md-boo-file" resource = "BooFile.png" />

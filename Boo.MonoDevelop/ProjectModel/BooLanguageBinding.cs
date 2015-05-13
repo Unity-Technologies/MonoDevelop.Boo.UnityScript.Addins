@@ -40,14 +40,9 @@ namespace Boo.MonoDevelop.ProjectModel
 
 		#region ILanguageBinding implementation
 
-		private static bool IsBooFile(string fileName)
-		{
-			return fileName.ToLower ().EndsWith (".boo");
-		}
-
 		public bool IsSourceCodeFile (FilePath fileName)
 		{
-			return IsBooFile (fileName);
+			return fileName.ToString ().ToLower ().EndsWith (".boo");
 		}
 
 		public FilePath GetFileName (FilePath fileNameWithoutExtension)
