@@ -72,10 +72,9 @@
 		<DotNetProject language="Boo" extension="booproj" guid="{B3672514-7503-4B01-B4B4-B44E87061EA2}"/>
   </Extension>
 		
-<!--	<Extension path = "/MonoDevelop/Core/StockIcons">
+	<Extension path = "/MonoDevelop/Core/StockIcons">
 		<StockIcon stockid = "md-boo-file" resource = "BooFile.png" />
-		<StockIcon stockid = "md-boo-project" resource = "BooProjectStockIcon.png" />
-	</Extension>-->
+	</Extension>
 	
 	<Extension path = "/MonoDevelop/Core/MimeTypes">
 		<MimeType id="text/x-boo" _description="Boo source code" icon="md-boo-file" isText="true">

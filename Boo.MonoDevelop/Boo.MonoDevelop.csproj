@@ -53,8 +53,17 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="ProjectModel\" />
+    <Folder Include="Icons\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Boo.MonoDevelop.addin.xml" />
+    <EmbeddedResource Include="Icons\Boo.File.EmptyFile" />
+    <EmbeddedResource Include="Icons\Boo.File.Form" />
+    <EmbeddedResource Include="Icons\BooBinding.Base" />
+    <EmbeddedResource Include="Icons\BooFile.png">
+      <LogicalName>BooFile.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\BooProjectDecoration.png" />
+    <EmbeddedResource Include="Icons\BooProjectStockIcon.png" />
   </ItemGroup>
 </Project>
