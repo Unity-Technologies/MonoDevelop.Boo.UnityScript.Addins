@@ -4,9 +4,6 @@ namespace Boo.MonoDevelop.ProjectModel
 {
 	public class BooProjectParameters : ProjectParameters
 	{
-		public BooProjectParameters ()
-		{
-		}
 	}
 }
 

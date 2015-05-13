@@ -18,6 +18,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="Execute" command="../../monodevelop/main/build/bin/MonoDevelop.exe" />
+      </CustomCommands>
+    </CustomCommands>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -42,6 +47,7 @@
     <Compile Include="ProjectModel\BooLanguageBinding.cs" />
     <Compile Include="ProjectModel\BooProjectParameters.cs" />
     <Compile Include="ProjectModel\BooCompilationParameters.cs" />
+    <Compile Include="ProjectModel\BooCompiler.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

@@ -21,7 +21,7 @@ namespace Boo.MonoDevelop.ProjectModel
 
 		public BuildResult Compile (ProjectItemCollection items, DotNetProjectConfiguration configuration, ConfigurationSelector configSelector, IProgressMonitor monitor)
 		{
-			throw new NotImplementedException ();
+			return new BooCompiler (configuration, configSelector, items, monitor).Run ();
 		}
 
 		public ClrVersion[] GetSupportedClrVersions ()
