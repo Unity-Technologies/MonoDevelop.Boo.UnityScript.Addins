@@ -1,10 +1,10 @@
 <Addin namespace   = "MonoDevelop"
 	   id		   = "UnityScript"
 	   name		   = "UnityScript Language Binding"
-	   author	   = "Lukasz Paczkowski"
+	   author	   = "Lukasz Paczkowski and Rodrigo B. de Oliveira"
 	   copyright   = "GPL"
 	   url		   = "http://unity3d.com"
-	   description = "Provides support for UnityScript projects."
+	   description = "UnityScript Language binding"
 	   category	   = "Language bindings"
 	   version	   = "1.0.0">
 	   

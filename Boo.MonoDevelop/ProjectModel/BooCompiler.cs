@@ -37,7 +37,7 @@ namespace Boo.MonoDevelop.ProjectModel
 			try
 			{
 				WriteOptionsToResponseFile (responseFileName);
-				var compilerOutput = ExecuteProcess(BoocPath(), "\""+responseFileName+"\"");
+				var compilerOutput = ExecuteProcess(BoocPath(), "\"@"+responseFileName+"\"");
 
 				var buildResult = ParseBuildResult(compilerOutput);
 

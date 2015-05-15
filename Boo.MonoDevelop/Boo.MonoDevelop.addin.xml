@@ -10,7 +10,7 @@
 	   
 	<Runtime>
 		<Import assembly="Boo.MonoDevelop.dll" />
-		<Import assembly="UnityScript.Ide.dll" />
+<!--		<Import assembly="UnityScript.Ide.dll" />
 		<Import assembly="boo/Boo.Lang.dll" />
 		<Import assembly="boo/Boo.Lang.Extensions.dll" />
 		<Import assembly="boo/Boo.Lang.Useful.dll" />
@@ -19,7 +19,7 @@
 		<Import assembly="boo/Boo.Lang.PatternMatching.dll" />
 		<Import assembly="boo/Boo.Lang.CodeDom.dll" />
 		<Import assembly="boo/Boo.Lang.Interpreter.dll" />
-		<Import file="boo/booc.exe" />
+		<Import file="boo/booc.exe" />-->
 	</Runtime>
 
 	<Dependencies>
@@ -84,7 +84,11 @@
 		<LanguageBinding id = "Boo"
 				supportedextensions = ".boo"
 				class = "Boo.MonoDevelop.ProjectModel.BooLanguageBinding" />
-	</Extension> 
+	</Extension>
+
+	<Extension path = "/MonoDevelop/ProjectModel/ProjectServiceExtensions">
+   		<Class class = "Boo.MonoDevelop.ProjectModel.BooProjectServiceExtension" />
+   	</Extension>
 	
 <!--	<Extension path = "/MonoDevelop/SourceEditor2/CustomModes">
 		<SyntaxMode mimeTypes="text/x-boo" class="Boo.MonoDevelop.Highlighting.BooSyntaxMode"/>

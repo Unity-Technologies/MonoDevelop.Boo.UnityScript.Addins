@@ -48,6 +48,7 @@
     <Compile Include="ProjectModel\BooProjectParameters.cs" />
     <Compile Include="ProjectModel\BooCompilationParameters.cs" />
     <Compile Include="ProjectModel\BooCompiler.cs" />
+    <Compile Include="ProjectModel\BooProjectServiceExtension.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -55,7 +56,9 @@
     <Folder Include="Icons\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Boo.MonoDevelop.addin.xml" />
+    <EmbeddedResource Include="Boo.MonoDevelop.addin.xml">
+      <LogicalName>Boo.MonoDevelop.addin.xml</LogicalName>
+    </EmbeddedResource>
     <EmbeddedResource Include="Icons\Boo.File.EmptyFile" />
     <EmbeddedResource Include="Icons\Boo.File.Form" />
     <EmbeddedResource Include="Icons\BooBinding.Base" />
