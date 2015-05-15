@@ -156,11 +156,48 @@ namespace Boo.MonoDevelop.ProjectModel
 				return process.StandardError.ReadToEnd ();
 		}
 
+		private bool IsWarningCode(string code)
+		{
+			return !string.IsNullOrEmpty (code) && code.StartsWith ("BCW");
+		}
+
 		private BuildResult ParseBuildResult(string stdout)
 		{
 			var result = new BuildResult ();
 
-			// TODO
+			using (StringReader reader = new StringReader(stdout))
+			{
+				string line;
+				while ((line = reader.ReadLine()) != null)
+				{
+					var match = Regex.Match (line, @"^(.+)\((\d+),(\d+)\):\s+(.+?):\s+(.+)$");
+
+					if (match.Success) 
+					{
+						result.Append (new BuildError 
+						{
+							FileName = match.Groups [1].Value,
+							Line = int.Parse (match.Groups [2].Value),
+							Column = int.Parse (match.Groups [3].Value),
+							IsWarning = IsWarningCode (match.Groups [4].Value),
+							ErrorNumber = match.Groups [4].Value,
+							ErrorText = match.Groups [5].Value									
+						});
+					}
+
+					match = Regex.Match (line, @"^(.+):\s+(.+)$");
+
+					if (match.Success) 
+					{
+						result.Append (new BuildError 
+						{
+							IsWarning = IsWarningCode (match.Groups [1].Value),
+							ErrorNumber = match.Groups [1].Value,
+							ErrorText = match.Groups [2].Value									
+						});
+					}
+				}
+			}
 
 			return result;
 		}
