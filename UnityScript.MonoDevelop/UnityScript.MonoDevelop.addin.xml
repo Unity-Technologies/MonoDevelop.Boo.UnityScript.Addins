@@ -29,9 +29,7 @@
 	<Dependencies>
 		<Addin id = "Core" version = "5.9.0"/>
 		<Addin id = "Ide" version = "5.9.0"/>
-<!--		<Addin id = "SourceEditor2" version = "4.0.1" />
-		<Addin id = "DesignerSupport" version = "4.0.1" />
-		<Addin id = "Refactoring" version = "4.0.1" />	-->
+		<Addin id = "SourceEditor2" version = "5.9.0" />
 	</Dependencies>
 	
 <!--	<Extension path="/MonoDevelop/Core/SupportPackages">
@@ -81,9 +79,9 @@
 		</MimeType>
 	</Extension>
 
-<!--	<Extension path = "/MonoDevelop/SourceEditor2/SyntaxModes">
+	<Extension path = "/MonoDevelop/SourceEditor2/SyntaxModes">
 		<Templates resource="UnityScriptSyntaxMode.xml"/>
-	</Extension>-->
+	</Extension>-
 
 	<Extension path = "/MonoDevelop/ProjectModel/LanguageBindings">
 		<LanguageBinding id = "UnityScript"
@@ -95,34 +93,4 @@
    		<Class class = "UnityScript.MonoDevelop.ProjectModel.UnityScriptProjectServiceExtension" />
    	</Extension>
 
-
-<!--	<Extension path = "/MonoDevelop/Ide/TextEditorExtensions">
-		<Class class = "UnityScript.MonoDevelop.Completion.UnityScriptEditorCompletion" />
-	</Extension>-->
-	
-<!--	<Extension path = "/MonoDevelop/TypeSystem/Parser">
-		<Parser mimeType = "text/x-unityscript"
-			class = "UnityScript.MonoDevelop.ProjectModel.UnityScriptParser" />
-		<Parser mimeType = "text/x-javascript"
-			class = "UnityScript.MonoDevelop.ProjectModel.UnityScriptParser" />
-		<Parser mimeType = "application/javascript"
-			class = "UnityScript.MonoDevelop.ProjectModel.UnityScriptParser" />
-	</Extension>-->
-	
-<!--	<Extension path="/MonoDevelop/SourceEditor2/ContextMenu/Editor">
-		<Condition id="FileType" fileExtensions=".js">
-			<CommandItem id = "MonoDevelop.Refactoring.RefactoryCommands.GotoDeclaration" insertafter="MonoDevelop.SourceEditor.SourceEditorCommands.MarkerOperations" />
-		</Condition>
-		<Condition id="FileType" fileExtensions=".us">
-			<CommandItem id = "MonoDevelop.Refactoring.RefactoryCommands.GotoDeclaration" insertafter="MonoDevelop.SourceEditor.SourceEditorCommands.MarkerOperations" />
-		</Condition>
-	</Extension>
-	
-	<Extension path = "/MonoDevelop/ProjectModel/Gui/ItemOptionPanels/Build/Compiler">  
-		<Condition id="ActiveLanguage" value="UnityScript">  
-			<Panel id = "UnityScriptCompilationParametersPanel"  
-				_label = "Compiler"  
-				class = "UnityScript.MonoDevelop.ProjectModel.GUI.UnityScriptCompilationParametersPanel"/>  
-		</Condition>
-	</Extension>  -->
 </Addin>

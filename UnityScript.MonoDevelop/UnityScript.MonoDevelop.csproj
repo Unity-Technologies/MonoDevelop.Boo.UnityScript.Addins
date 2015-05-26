@@ -41,13 +41,18 @@
     <Folder Include="Icons\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="UnityScript.MonoDevelop.addin.xml" />
+    <EmbeddedResource Include="UnityScript.MonoDevelop.addin.xml">
+      <LogicalName>UnityScript.MonoDevelop.addin.xml</LogicalName>
+    </EmbeddedResource>
     <EmbeddedResource Include="Icons\UnityScriptFile128.png" />
     <EmbeddedResource Include="Icons\UnityScriptFile32.png">
       <LogicalName>UnityScriptFile32.png</LogicalName>
     </EmbeddedResource>
     <EmbeddedResource Include="Icons\UnityScriptProject.png" />
     <EmbeddedResource Include="Icons\UnityScriptProject32.png" />
+    <EmbeddedResource Include="UnityScriptSyntaxMode.xml">
+      <LogicalName>UnityScriptSyntaxMode.xml</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ProjectModel\UnityScriptLanguageBinding.cs" />
