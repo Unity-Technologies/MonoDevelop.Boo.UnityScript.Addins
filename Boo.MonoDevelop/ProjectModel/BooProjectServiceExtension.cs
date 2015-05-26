@@ -23,8 +23,12 @@ namespace Boo.MonoDevelop.ProjectModel
 				{
 					var useMSBuildEngineByDefault = msBuildProjectHandler.GetType ().GetProperty ("UseMSBuildEngineByDefault", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
 
-					if (useMSBuildEngineByDefault == null)
-						throw new NotSupportedException ("Could not find UseMSBuildEngineByDefault property in MSBuildProjectHandler. Building of Boo projects is not supported.");
+					if (useMSBuildEngineByDefault == null) 
+					{
+						BuildResult result = new BuildResult ();
+						result.AddError("Could not find UseMSBuildEngineByDefault property in MSBuildProjectHandler. Building of Boo projects is not supported.");
+						return result;
+					}
 
 					useMSBuildEngineByDefault.SetValue (msBuildProjectHandler, false);
 				}
