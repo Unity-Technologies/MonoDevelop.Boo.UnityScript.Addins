@@ -1,4 +1,5 @@
 ﻿using System;
+
 using MonoDevelop.Core;
 using MonoDevelop.Projects;
 
@@ -17,7 +18,7 @@ namespace UnityScript.MonoDevelop.ProjectModel
 		}
 		public BuildResult Compile (ProjectItemCollection items, DotNetProjectConfiguration configuration, ConfigurationSelector configSelector, IProgressMonitor monitor)
 		{
-			throw new NotImplementedException ();
+			return new UnityScriptCompiler (configuration, configSelector, items, monitor).Run();
 		}
 		public ClrVersion[] GetSupportedClrVersions ()
 		{

@@ -54,5 +54,6 @@
     <Compile Include="ProjectModel\UnityScriptCompilationParameters.cs" />
     <Compile Include="ProjectModel\UnityScriptProjectParameters.cs" />
     <Compile Include="ProjectModel\UnityScriptProjectServiceExtension.cs" />
+    <Compile Include="ProjectModel\UnityScriptCompiler.cs" />
   </ItemGroup>
 </Project>
