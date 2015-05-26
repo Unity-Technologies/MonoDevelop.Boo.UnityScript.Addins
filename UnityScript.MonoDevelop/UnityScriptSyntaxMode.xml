@@ -4,7 +4,7 @@ UnityScript syntax mode, adapted from CSharpSyntaxMode.xml written by Mike Krüg
 
  -->
  
-<SyntaxMode name = "UnityScript" mimeTypes="text/x-unityscript">
+<SyntaxMode name = "UnityScript" mimeTypes="text/x-unityscript;application/javascript;text/javascript">
 	<Property name="LineComment">//</Property>
 	<Property name="BlockCommentStart">/*</Property>
 	<Property name="BlockCommentEnd">*/</Property>
@@ -188,7 +188,7 @@ UnityScript syntax mode, adapted from CSharpSyntaxMode.xml written by Mike Krüg
 			<Begin>"</Begin>
 			<End>"</End>
 		</Span>
-		<Keywords color="comment.keyword">
+		<Keywords color="Keyword(Comment)">
 			<Word>c</Word>
 			<Word>code</Word>
 			<Word>example</Word>
