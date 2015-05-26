@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+
 using MonoDevelop.Projects;
 using MonoDevelop.Core.Serialization;
 
@@ -32,7 +34,7 @@ namespace Boo.MonoDevelop.ProjectModel
 				if (string.IsNullOrEmpty (value))
 					defines = new List<string> ();
 				else
-					defines = new List<string> (value.Split (new char[1]{ ';' }, StringSplitOptions.RemoveEmptyEntries));
+					defines = new List<string> (value.Split (new char[1]{ ';' }, StringSplitOptions.RemoveEmptyEntries).Distinct().ToArray());
 			}
 		}
 
