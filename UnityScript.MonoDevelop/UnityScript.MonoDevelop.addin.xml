@@ -90,7 +90,12 @@
 				supportedextensions = ".us;.js"
 				class = "UnityScript.MonoDevelop.ProjectModel.UnityScriptLanguageBinding" />
 	</Extension> 
-	
+
+	<Extension path = "/MonoDevelop/ProjectModel/ProjectServiceExtensions">
+   		<Class class = "UnityScript.MonoDevelop.ProjectModel.UnityScriptProjectServiceExtension" />
+   	</Extension>
+
+
 <!--	<Extension path = "/MonoDevelop/Ide/TextEditorExtensions">
 		<Class class = "UnityScript.MonoDevelop.Completion.UnityScriptEditorCompletion" />
 	</Extension>-->
