@@ -55,6 +55,8 @@ namespace UnityScript.MonoDevelop.ProjectModel
 
 			if(ContainsReference(referencedFiles, "UnityEngine.dll"))
 			{
+				commandLine.WriteLine ("-nowarn:BCW0016"); // Unused namespace
+				commandLine.WriteLine ("-nowarn:BCW0003"); // Unused local variable
 				commandLine.WriteLine ("-base:UnityEngine.MonoBehaviour");
 				commandLine.WriteLine ("-method:Main");
 				commandLine.WriteLine ("-i:System.Collections");
