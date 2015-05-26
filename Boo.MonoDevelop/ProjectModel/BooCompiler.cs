@@ -172,10 +172,8 @@ namespace Boo.MonoDevelop.ProjectModel
 				{
 					var match = Regex.Match (line, @"^(.+)\((\d+),(\d+)\):\s+(.+?):\s+(.+)$");
 
-					if (match.Success) 
-					{
-						result.Append (new BuildError 
-						{
+					if (match.Success) {
+						result.Append (new BuildError {
 							FileName = match.Groups [1].Value,
 							Line = int.Parse (match.Groups [2].Value),
 							Column = int.Parse (match.Groups [3].Value),
@@ -183,18 +181,18 @@ namespace Boo.MonoDevelop.ProjectModel
 							ErrorNumber = match.Groups [4].Value,
 							ErrorText = match.Groups [5].Value									
 						});
-					}
-
-					match = Regex.Match (line, @"^(.+):\s+(.+)$");
-
-					if (match.Success) 
+					} 
+					else 
 					{
-						result.Append (new BuildError 
-						{
-							IsWarning = IsWarningCode (match.Groups [1].Value),
-							ErrorNumber = match.Groups [1].Value,
-							ErrorText = match.Groups [2].Value									
-						});
+						match = Regex.Match (line, @"^(.+):\s+(.+)$");
+
+						if (match.Success) {
+							result.Append (new BuildError {
+								IsWarning = IsWarningCode (match.Groups [1].Value),
+								ErrorNumber = match.Groups [1].Value,
+								ErrorText = match.Groups [2].Value									
+							});
+						}
 					}
 				}
 			}
