@@ -76,7 +76,7 @@ namespace Boo.MonoDevelop.ProjectModel
 
 		private string BooAssemblyPath(string fileName)
 		{
-			return Path.Combine(AssemblyPath(), Path.Combine("boo", fileName));		
+			return Path.Combine(AssemblyPath(), Path.Combine("Boo", fileName));		
 		}
 
 		private string AssemblyPath()
@@ -170,7 +170,7 @@ namespace Boo.MonoDevelop.ProjectModel
 				string line;
 				while ((line = reader.ReadLine()) != null)
 				{
-					var match = Regex.Match (line, @"^(.+)\((\d+),(\d+)\):\s+(.+?):\s+(.+)$");
+					var match = Regex.Match (line, @"^(.+)\((\d+),(\d+)\):\s+(BC.+?):\s+(.+)$");
 
 					if (match.Success) {
 						result.Append (new BuildError {
@@ -184,7 +184,7 @@ namespace Boo.MonoDevelop.ProjectModel
 					} 
 					else 
 					{
-						match = Regex.Match (line, @"^(.+):\s+(.+)$");
+						match = Regex.Match (line, @"^(BC.+):\s+(.+)$");
 
 						if (match.Success) {
 							result.Append (new BuildError {

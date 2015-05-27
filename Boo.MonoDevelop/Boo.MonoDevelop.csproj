@@ -45,11 +45,13 @@
     <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="MonoDevelop.Ide">
       <HintPath>..\..\monodevelop\main\build\bin\MonoDevelop.Ide.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="Mono.TextEditor">
       <HintPath>..\..\monodevelop\main\build\bin\Mono.TextEditor.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
   </ItemGroup>
@@ -68,6 +70,7 @@
     <Folder Include="Icons\" />
     <Folder Include="ProjectModel\GUI\" />
     <Folder Include="Editor\" />
+    <Folder Include="Boo\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Boo.MonoDevelop.addin.xml">
@@ -81,5 +84,91 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Icons\BooProjectDecoration.png" />
     <EmbeddedResource Include="Icons\BooProjectStockIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\external\Boo\Boo.Lang.CodeDom.dll">
+      <Link>Boo\Boo.Lang.CodeDom.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\Boo\Boo.Lang.Compiler.dll">
+      <Link>Boo\Boo.Lang.Compiler.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\Boo\Boo.Lang.Extensions.dll">
+      <Link>Boo\Boo.Lang.Extensions.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\Boo\Boo.Lang.Interpreter.dll">
+      <Link>Boo\Boo.Lang.Interpreter.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\Boo\Boo.Lang.Parser.dll">
+      <Link>Boo\Boo.Lang.Parser.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\Boo\Boo.Lang.PatternMatching.dll">
+      <Link>Boo\Boo.Lang.PatternMatching.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\Boo\Boo.Lang.Useful.dll">
+      <Link>Boo\Boo.Lang.Useful.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\Boo\Boo.Lang.dll">
+      <Link>Boo\Boo.Lang.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\Boo\Boo.Microsoft.Build.targets">
+      <Link>Boo\Boo.Microsoft.Build.targets</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\Boo\Boo.NAnt.Tasks.dll">
+      <Link>Boo\Boo.NAnt.Tasks.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\Boo\boo.pc">
+      <Link>Boo\boo.pc</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\Boo\booc">
+      <Link>Boo\booc</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\Boo\booc.exe">
+      <Link>Boo\booc.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\Boo\booc.exe.config">
+      <Link>Boo\booc.exe.config</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\Boo\booc.rsp">
+      <Link>Boo\booc.rsp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\Boo\booi">
+      <Link>Boo\booi</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\Boo\booi.exe">
+      <Link>Boo\booi.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\Boo\booi.exe.config">
+      <Link>Boo\booi.exe.config</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\Boo\booish">
+      <Link>Boo\booish</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\Boo\booish.exe">
+      <Link>Boo\booish.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\Boo\booish.exe.config">
+      <Link>Boo\booish.exe.config</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>

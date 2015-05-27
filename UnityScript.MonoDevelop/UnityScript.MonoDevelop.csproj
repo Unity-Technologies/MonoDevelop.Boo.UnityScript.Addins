@@ -39,6 +39,7 @@
   <ItemGroup>
     <Folder Include="ProjectModel\" />
     <Folder Include="Icons\" />
+    <Folder Include="UnityScript\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="UnityScript.MonoDevelop.addin.xml">
@@ -60,5 +61,51 @@
     <Compile Include="ProjectModel\UnityScriptProjectParameters.cs" />
     <Compile Include="ProjectModel\UnityScriptProjectServiceExtension.cs" />
     <Compile Include="ProjectModel\UnityScriptCompiler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\external\UnityScript\Boo.Lang.CodeDom.dll">
+      <Link>UnityScript\Boo.Lang.CodeDom.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\UnityScript\Boo.Lang.Compiler.dll">
+      <Link>UnityScript\Boo.Lang.Compiler.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\UnityScript\Boo.Lang.Extensions.dll">
+      <Link>UnityScript\Boo.Lang.Extensions.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\UnityScript\Boo.Lang.Interpreter.dll">
+      <Link>UnityScript\Boo.Lang.Interpreter.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\UnityScript\Boo.Lang.Parser.dll">
+      <Link>UnityScript\Boo.Lang.Parser.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\UnityScript\Boo.Lang.PatternMatching.dll">
+      <Link>UnityScript\Boo.Lang.PatternMatching.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\UnityScript\Boo.Lang.Useful.dll">
+      <Link>UnityScript\Boo.Lang.Useful.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\UnityScript\Boo.Lang.dll">
+      <Link>UnityScript\Boo.Lang.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\UnityScript\UnityScript.Lang.dll">
+      <Link>UnityScript\UnityScript.Lang.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\UnityScript\UnityScript.dll">
+      <Link>UnityScript\UnityScript.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\external\UnityScript\us.exe">
+      <Link>UnityScript\us.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>

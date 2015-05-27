@@ -37,7 +37,7 @@ namespace UnityScript.MonoDevelop.ProjectModel
 			try
 			{
 				WriteOptionsToResponseFile(responseFileName);
-				var compiler = MapPath("bin/us.exe");
+				var compiler = MapPath("UnityScript/us.exe");
 				var compilerOutput =  ExecuteProcess(compiler, "\"@"+responseFileName+"\"");
 				return ParseBuildResult(compilerOutput);
 			}
@@ -148,7 +148,7 @@ namespace UnityScript.MonoDevelop.ProjectModel
 				string line;
 				while ((line = reader.ReadLine()) != null)
 				{
-					var match = Regex.Match (line, @"(.+)\((\d+),(\d+)\):\s+(.+?):\s+(.+)$");
+					var match = Regex.Match (line, @"(.+)\((\d+),(\d+)\):\s+(BC.+?):\s+(.+)$");
 
 					if (match.Success) 
 					{
@@ -163,7 +163,7 @@ namespace UnityScript.MonoDevelop.ProjectModel
 					} 
 					else 
 					{
-						match = Regex.Match (line, @"(.+):\s+(.+)");
+						match = Regex.Match (line, @"(BC.+):\s+(.+)");
 
 						if (match.Success) {
 							result.Append (new BuildError {
