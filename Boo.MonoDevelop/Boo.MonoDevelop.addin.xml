@@ -25,9 +25,7 @@
 	<Dependencies>
 		<Addin id = "Core" version = "5.9.0"/>
 		<Addin id = "Ide" version = "5.9.0"/>
-<!--		<Addin id = "SourceEditor2" version = "4.0.1" />
-		<Addin id = "DesignerSupport" version = "4.0.1" />
-		<Addin id = "Refactoring" version = "4.0.1" />	-->
+		<Addin id = "SourceEditor2" version = "5.9.0" />
 	</Dependencies>
 	
 	<Extension path="/MonoDevelop/Core/SupportPackages">
@@ -94,28 +92,15 @@
 		<SyntaxMode mimeTypes="text/x-boo" class="Boo.MonoDevelop.Highlighting.BooSyntaxMode"/>
 	</Extension>-->
 	
-<!--	<Extension path = "/MonoDevelop/Ide/TextEditorExtensions">
-		<Class fileExtensions = ".boo" class = "Boo.MonoDevelop.Completion.BooEditorCompletion" />
+	<Extension path = "/MonoDevelop/Ide/TextEditorExtensions">
 		<Class fileExtensions = ".boo" class = "Boo.MonoDevelop.Editing.BooEditorIndentation" />
-	</Extension>-->
-	
-<!--	<Extension path = "/MonoDevelop/TypeSystem/Parser">
-		<Parser mimeType = "text/x-boo"
-			class = "Boo.MonoDevelop.ProjectModel.BooParser" />
-	</Extension>-->
-	
+	</Extension>
+
 	<Extension path = "/MonoDevelop/ProjectModel/Gui/ItemOptionPanels/Build/Compiler">  
 		<Condition id="ActiveLanguage" value="Boo">  
 			<Panel id = "BooCompilationParametersPanel"  
 				_label = "Compiler"  
 				class = "Boo.MonoDevelop.ProjectModel.GUI.BooCompilationParametersPanel"/>  
 		</Condition>
-	</Extension>  
-
-	<!---
-	<Extension path="/MonoDevelop/SourceEditor2/ContextMenu/Editor">
-		<Condition id="FileType" fileExtensions=".boo">
-			<CommandItem id = "MonoDevelop.Refactoring.RefactoryCommands.GotoDeclaration" insertafter="MonoDevelop.SourceEditor.SourceEditorCommands.MarkerOperations" />
-		</Condition>
-	</Extension>-->
+	</Extension>
 </Addin>
