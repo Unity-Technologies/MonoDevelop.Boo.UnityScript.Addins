@@ -10,20 +10,17 @@
 	   
 	<Runtime>
 		<Import assembly="UnityScript.MonoDevelop.dll" />
-<!--		<Import assembly="Boo.MonoDevelop.Util.dll" />
-		<Import assembly="Boo.Ide.dll" />
-		<Import assembly="UnityScript.Ide.dll" />
-		<Import assembly="bin/UnityScript.Lang.dll" />
-		<Import assembly="bin/UnityScript.dll" />
-		<Import assembly="bin/Boo.Lang.dll" />
-		<Import assembly="bin/Boo.Lang.Extensions.dll" />
-		<Import assembly="bin/Boo.Lang.Useful.dll" />
-		<Import assembly="bin/Boo.Lang.Compiler.dll" />
-		<Import assembly="bin/Boo.Lang.Parser.dll" />
-		<Import assembly="bin/Boo.Lang.PatternMatching.dll" />
-		<Import assembly="bin/Boo.Lang.CodeDom.dll" />
-		<Import assembly="bin/Boo.Lang.Interpreter.dll" />
-		<Import file="bin/us.exe" />-->
+		<Import assembly="UnityScript/UnityScript.Lang.dll" />
+		<Import assembly="UnityScript/UnityScript.dll" />
+		<Import assembly="UnityScript/Boo.Lang.dll" />
+		<Import assembly="UnityScript/Boo.Lang.Extensions.dll" />
+		<Import assembly="UnityScript/Boo.Lang.Useful.dll" />
+		<Import assembly="UnityScript/Boo.Lang.Compiler.dll" />
+		<Import assembly="UnityScript/Boo.Lang.Parser.dll" />
+		<Import assembly="UnityScript/Boo.Lang.PatternMatching.dll" />
+		<Import assembly="UnityScript/Boo.Lang.CodeDom.dll" />
+		<Import assembly="UnityScript/Boo.Lang.Interpreter.dll" />
+		<Import file="UnityScript/us.exe" />-->
 	</Runtime>
 
 	<Dependencies>
@@ -32,14 +29,14 @@
 		<Addin id = "SourceEditor2" version = "5.9.0" />
 	</Dependencies>
 	
-<!--	<Extension path="/MonoDevelop/Core/SupportPackages">
+	<Extension path="/MonoDevelop/Core/SupportPackages">
 		<Condition id="PackageNotInstalled" name="mono-unityscript" version="0.9.4">
 			<Package name="unityscript" version="0.9.4" clrVersion="Default">
-				<Assembly file="bin/UnityScript.Lang.dll" />
-				<Assembly file="bin/UnityScript.dll" />
+				<Assembly file="UnityScript/UnityScript.Lang.dll" />
+				<Assembly file="UnityScript/UnityScript.dll" />
 			</Package>
 		</Condition>
-	</Extension>-->
+	</Extension>
 	
 <!--	<Extension path = "/MonoDevelop/Ide/FileTemplates">
 		<FileTemplate id = "UnityScriptEmptyFile" resource = "EmptyUnityScriptFile.xft.xml"/>
