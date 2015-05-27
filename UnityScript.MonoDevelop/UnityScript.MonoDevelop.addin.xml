@@ -6,7 +6,7 @@
 	   url		   = "http://unity3d.com"
 	   description = "UnityScript Language binding"
 	   category	   = "Language bindings"
-	   version	   = "1.0.0">
+	   version	   = "5.9.0">
 	   
 	<Runtime>
 		<Import assembly="UnityScript.MonoDevelop.dll" />
