@@ -25,7 +25,6 @@ sub check_dirs {
 
 	die ("Must grab Boo implementation") if !-d "boo";
 	die ("Must grab Boo extensions") if !-d "boo-extensions";
-	die ("Must grab Boo MD addins implementation") if !-d "boo-md-addins";
 	die ("Must grab Unityscript implementation") if !-d "unityscript";
 }
 
