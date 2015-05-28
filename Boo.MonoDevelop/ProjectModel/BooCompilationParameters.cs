@@ -39,21 +39,6 @@ namespace Boo.MonoDevelop.ProjectModel
 		}
 
 		public List<string> DefineSymbols { get { return defines; } }
-
-		[Obsolete]
-		public override void AddDefineSymbol (string symbol)
-		{
-			if (!defines.Contains (symbol))
-				defines.Add (symbol);
-		}
-
-
-		[Obsolete]
-		public override void RemoveDefineSymbol (string symbol)
-		{
-			if (defines.Contains (symbol))
-				defines.Remove (symbol);
-		}
 	}
 }
 
