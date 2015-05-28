@@ -10,8 +10,16 @@ UnityScript syntax mode, adapted from CSharpSyntaxMode.xml written by Mike Krüg
 	<Property name="BlockCommentEnd">*/</Property>
 	<Property name="StringQuote">"</Property>
 	<Property name="StringQuote">'</Property>
-	
-	<EolSpan tagColor = "Preprocessor" rule="text.preprocessor">#pragma</EolSpan>
+
+	<EolSpan tagColor = "Preprocessor" rule="text.preprocessor">#if</EolSpan>
+	<EolSpan tagColor = "Preprocessor" rule="text.preprocessor.empty">#else</EolSpan>
+	<EolSpan tagColor = "Preprocessor" rule="text.preprocessor">#elif</EolSpan>
+	<EolSpan tagColor = "Preprocessor" rule="text.preprocessor.empty">#endif</EolSpan>
+	<EolSpan tagColor = "Preprocessor" rule="text.preprocessor.empty">#define</EolSpan>
+	<EolSpan tagColor = "Preprocessor" rule="text.preprocessor.empty">#undef</EolSpan>
+	<EolSpan tagColor = "Preprocessor" rule="text.preprocessor.empty">#pragma</EolSpan>
+
+
 	<EolSpan color = "Comment(Doc)" rule="XmlDocumentation" tagColor="Comment(DocTag)">///</EolSpan>
 	<EolSpan color = "Comment(Line)" rule="Comment" tagColor="Comment(Line)">//</EolSpan>
 
@@ -106,8 +114,6 @@ UnityScript syntax mode, adapted from CSharpSyntaxMode.xml written by Mike Krüg
 		<Word>Function</Word>
 		<Word>Array</Word>
 		<Word>var</Word>
-
-		<Word>function</Word>
 
 		<Word>try</Word>
 		<Word>throw</Word>
@@ -215,9 +221,6 @@ UnityScript syntax mode, adapted from CSharpSyntaxMode.xml written by Mike Krüg
 	</Rule>
 
 	<Keywords color="Keyword(Type)">
-		<Word>Application</Word>
-		<Word>EditorApplication</Word>
-		<Word>Handles</Word>
 		<Word>AnimationBlendMode</Word>
 		<Word>AnisotropicFiltering</Word>
 		<Word>AspectRatio</Word>
@@ -327,7 +330,6 @@ UnityScript syntax mode, adapted from CSharpSyntaxMode.xml written by Mike Krüg
 		<Word>AnimationState</Word>
 		<Word>AnimationUtility</Word>
 		<Word>Application</Word>
-		<Word>Array</Word>
 		<Word>ArrayUtility</Word>
 		<Word>AssetBundle</Word>
 		<Word>AssetBundleRequest</Word>
@@ -443,7 +445,6 @@ UnityScript syntax mode, adapted from CSharpSyntaxMode.xml written by Mike Krüg
 		<Word>Network</Word>
 		<Word>NetworkView</Word>
 		<Word>NonSerialized</Word>
-		<Word>Object</Word>
 		<Word>ObjectNames</Word>
 		<Word>ParticleAnimator</Word>
 		<Word>ParticleEmitter</Word>
@@ -454,7 +455,6 @@ UnityScript syntax mode, adapted from CSharpSyntaxMode.xml written by Mike Krüg
 		<Word>Ping</Word>
 		<Word>PlayerPrefs</Word>
 		<Word>PlayerPrefsException</Word>
-		<Word>PlayerSettings</Word>
 		<Word>PlayerSettings</Word>
 		<Word>Profiler</Word>
 		<Word>Projector</Word>
@@ -486,7 +486,6 @@ UnityScript syntax mode, adapted from CSharpSyntaxMode.xml written by Mike Krüg
 		<Word>SpringJoint</Word>
 		<Word>StaticBatchingUtility</Word>
 		<Word>StaticOcclusionCulling</Word>
-		<Word>String</Word>
 		<Word>SystemInfo</Word>
 		<Word>Terrain</Word>
 		<Word>TerrainCollider</Word>
