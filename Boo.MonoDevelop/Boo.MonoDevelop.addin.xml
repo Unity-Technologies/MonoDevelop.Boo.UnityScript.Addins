@@ -86,11 +86,11 @@
 	<Extension path = "/MonoDevelop/ProjectModel/ProjectServiceExtensions">
    		<Class class = "Boo.MonoDevelop.ProjectModel.BooProjectServiceExtension" />
    	</Extension>
-	
-<!--	<Extension path = "/MonoDevelop/SourceEditor2/CustomModes">
-		<SyntaxMode mimeTypes="text/x-boo" class="Boo.MonoDevelop.Highlighting.BooSyntaxMode"/>
-	</Extension>-->
-	
+
+   	<Extension path = "/MonoDevelop/SourceEditor2/SyntaxModes">
+		<Templates resource="BooSyntaxMode.xml"/>
+	</Extension>
+		
 	<Extension path = "/MonoDevelop/Ide/TextEditorExtensions">
 		<Class fileExtensions = ".boo" class = "Boo.MonoDevelop.Editing.BooEditorIndentation" />
 	</Extension>

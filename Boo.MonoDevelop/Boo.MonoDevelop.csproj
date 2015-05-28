@@ -84,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Icons\BooProjectDecoration.png" />
     <EmbeddedResource Include="Icons\BooProjectStockIcon.png" />
+    <EmbeddedResource Include="BooSyntaxMode.xml">
+      <LogicalName>BooSyntaxMode.xml</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\external\Boo\Boo.Lang.CodeDom.dll">
