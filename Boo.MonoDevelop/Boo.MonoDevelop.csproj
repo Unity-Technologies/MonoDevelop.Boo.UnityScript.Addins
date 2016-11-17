@@ -83,6 +83,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\external\UnityScript\UnityScript.dll">
+      <Link>Boo\UnityScript.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="..\external\Boo\Boo.Lang.CodeDom.dll">
       <Link>Boo\Boo.Lang.CodeDom.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
